@@ -29,8 +29,8 @@ nvidia_container_runtime: docker_compose driver
 terminal:
 	./install_terminal.sh
 
-post_install_gpu: nvidia_container_runtime terminal kubernetes terraform
+post_install_gpu: nvidia_container_runtime kubernetes terraform terminal
 	newgrp docker
 
-post_install_cpu: terminal kubernetes terraform
+post_install_cpu: kubernetes terraform terminal
 	newgrp docker

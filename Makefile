@@ -29,8 +29,11 @@ nvidia_container_runtime: docker_compose driver
 terminal:
 	./install_terminal.sh
 
-restic:
-	sudo apt-get install restic
+go:
+	./install_go.sh
+
+restic: go
+	./install_restic.sh
 
 post_install_gpu: nvidia_container_runtime kubernetes terraform restic terminal
 	newgrp docker

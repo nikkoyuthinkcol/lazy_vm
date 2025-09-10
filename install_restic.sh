@@ -2,5 +2,5 @@
 git clone https://github.com/restic/restic
 cd restic
 go run build.go
-cp ./restic /usr/bin
+sudo cp ./restic /usr/bin
 restic version
